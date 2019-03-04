@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace new_app
+namespace ProjektBook.Service
 {
-    class Program
+    class BookManagmentServices
     {
-        static void Main(string[] args)
+        public void Manage()
         {
-            var text = "Hello world";
-            Console.WriteLine(text);
+            //
         }
     }
 }
