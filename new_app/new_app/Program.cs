@@ -10,6 +10,8 @@ namespace new_app
     {
         static void Main(string[] args)
         {
+            var text = "Hello world";
+            Console.WriteLine(text);
         }
     }
 }
