@@ -27,7 +27,8 @@ namespace ProjektBook.Model
         }
         public List<Book> Books {
             get;
-            set; }
+            set;
+        }
 
     }
 }
