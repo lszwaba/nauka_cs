@@ -1,1 +1,1 @@
-# nauka_cs
+witam serdecznie :)
