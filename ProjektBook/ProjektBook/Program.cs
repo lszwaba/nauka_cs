@@ -12,7 +12,9 @@ namespace ProjektBook
         static void Main(string[] args)
         {
             //new BookManagmentServices().Execute();
-            new BookConsoleServices().Execute();
+            //new BookConsoleServices().Execute();
+            new BookAdder().BookAdd();
+
         }
     }
 }

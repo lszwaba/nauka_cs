@@ -11,8 +11,8 @@ namespace ProjektBook.Service
     {
         public void Execute()
         {
-            var booklist = new List<Book>();
-            for (int i =0; i <=1;i++)
+            
+            for (int i =0; i <=11;i++)
             {
                 Console.Write("Podaj autora:\n");
                 string authot = Console.ReadLine();
