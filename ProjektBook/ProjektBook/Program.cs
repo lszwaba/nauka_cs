@@ -11,8 +11,8 @@ namespace ProjektBook
     {
         static void Main(string[] args)
         {
-            new BookManagmentServices().ExecuteDoWhile();
-            
+            //new BookManagmentServices().Execute();
+            new BookConsoleServices().Execute();
         }
     }
 }
