@@ -52,9 +52,8 @@ namespace ProjektBook.Service
                 booklist.Add(bookToAdd);
                 indeks++;
             }
-            while{
-
-            }
+            while (indeks <= 10);
+           
         }
 
     }
