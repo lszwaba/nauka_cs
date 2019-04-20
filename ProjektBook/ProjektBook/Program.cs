@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProjektBook.Service;
+using ProjektBook.Model;
 
 namespace ProjektBook
 {
@@ -11,10 +12,11 @@ namespace ProjektBook
     {
         static void Main(string[] args)
         {
+            var booklist = new List<Book>();
             //new BookManagmentServices().Execute();
             //new BookConsoleServices().Execute();
-            new BookAdder().BookAdd();
-
+            booklist = new BookAdder().BookAdd();
+            new BookAdder().BookPrint(booklist);
         }
     }
 }

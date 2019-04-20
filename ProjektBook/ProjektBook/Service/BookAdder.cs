@@ -10,7 +10,7 @@ namespace ProjektBook.Service
 {
     class BookAdder
     {
-        public void BookAdd()
+        public List<Book> BookAdd()
         {
             var booklist = new List<Book>();
             Console.Write("Podaj ilość książęk którą chcesz wporowadzić:\n");
@@ -29,12 +29,18 @@ namespace ProjektBook.Service
                 booklist.Add(bookToAdd);
                 Console.Write("\n");
             }
-            foreach(Book a in booklist)
+            return booklist;
+        }
+
+        public void BookPrint(List<Book> books)
+        {
+            foreach (Book a in books)
             {
                 Console.WriteLine(a.ID);
                 Console.WriteLine(a.Author);
                 Console.WriteLine(a.titleBook);
                 Console.Write("\n");
+
             }
         }
     }
