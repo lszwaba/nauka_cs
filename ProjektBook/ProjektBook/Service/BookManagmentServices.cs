@@ -11,10 +11,12 @@ namespace ProjektBook.Service
     {
         public void Manage()
         {
+            ExecuteFor();
             //
         }
-        public void GetBook(List<Book> booklist, int i)
+        public void GetBook( int i)
         {
+            var booklist = new List<Book>();
             Book bookToAdd = new Book();
             bookToAdd.ID = i;
             bookToAdd.titleBook = "title_" + i.ToString();
@@ -23,28 +25,28 @@ namespace ProjektBook.Service
         }
         public void ExecuteFor()
         {
-            var booklist = new List<Book>();
+            
             for(int i = 1; i< 11; i++)
             {
-                GetBook(booklist, i);
+                GetBook( i);
             }
         }
         public void ExecuteWhile()
         {
-            var booklist = new List<Book>();
+            
             int indeks = 0;
             while (indeks <= 10)
             {
-                GetBook(booklist, indeks);
+                GetBook( indeks);
             }
         }
         public void ExecuteDoWhile()
         {
-            var booklist = new List<Book>();
+            
             int indeks = 0;
             do
             {
-                GetBook(booklist, indeks);
+                GetBook( indeks);
             }
             while (indeks <= 10);
            

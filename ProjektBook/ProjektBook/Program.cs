@@ -12,11 +12,12 @@ namespace ProjektBook
     {
         static void Main(string[] args)
         {
-            var booklist = new List<Book>();
+            //var booklist = new List<Book>();
             //new BookManagmentServices().Execute();
             //new BookConsoleServices().Execute();
-            booklist = new BookAdder().BookAdd();
-            new BookAdder().BookPrint(booklist);
+            // booklist = new BookAdder().BookAdd();
+            // new BookAdder().BookPrint(booklist);
+            new BookManagmentServices().Manage();
         }
     }
 }
