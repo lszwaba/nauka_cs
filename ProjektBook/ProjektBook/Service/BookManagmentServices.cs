@@ -13,16 +13,20 @@ namespace ProjektBook.Service
         {
             //
         }
+        public void GetBook(List<Book> booklist, int i)
+        {
+            Book bookToAdd = new Book();
+            bookToAdd.ID = i;
+            bookToAdd.titleBook = "title_" + i.ToString();
+            bookToAdd.Author = "Ziomek";
+            booklist.Add(bookToAdd);
+        }
         public void ExecuteFor()
         {
             var booklist = new List<Book>();
             for(int i = 1; i< 11; i++)
             {
-                Book bookToAdd = new Book();
-                bookToAdd.ID = i;
-                bookToAdd.titleBook = "title_" + i.ToString();
-                bookToAdd.Author = "Ziomek";
-                booklist.Add(bookToAdd);
+                GetBook(booklist, i);
             }
         }
         public void ExecuteWhile()
@@ -31,12 +35,7 @@ namespace ProjektBook.Service
             int indeks = 0;
             while (indeks <= 10)
             {
-                Book bookToAdd = new Book();
-                bookToAdd.ID = indeks;
-                bookToAdd.titleBook = "title_" + indeks.ToString();
-                bookToAdd.Author = "Ziomek";
-                booklist.Add(bookToAdd);
-                indeks++;
+                GetBook(booklist, indeks);
             }
         }
         public void ExecuteDoWhile()
@@ -45,12 +44,7 @@ namespace ProjektBook.Service
             int indeks = 0;
             do
             {
-                Book bookToAdd = new Book();
-                bookToAdd.ID = indeks;
-                bookToAdd.titleBook = "title_" + indeks.ToString();
-                bookToAdd.Author = "Ziomek";
-                booklist.Add(bookToAdd);
-                indeks++;
+                GetBook(booklist, indeks);
             }
             while (indeks <= 10);
            
