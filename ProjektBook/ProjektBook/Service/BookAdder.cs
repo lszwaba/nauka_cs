@@ -10,38 +10,25 @@ namespace ProjektBook.Service
 {
     class BookAdder
     {
-        public List<Book> BookAdd()
+        public void BookAdd()
         {
-            var booklist = new List<Book>();
+            
+            var console = new BookConsoleServices();
+            var bookManagmentServices = new BookManagmentServices();
             Console.Write("Podaj ilość książęk którą chcesz wporowadzić:\n");
             int number = Int32.Parse(Console.ReadLine());
 
             for (int i = 0; i < number; i++)
             {
-                Book bookToAdd = new Book();
-                Console.Write("Podaj autora:\n");
-                string author = Console.ReadLine();
-                Console.Write("Podaj tytuł:\n");
-                string title = Console.ReadLine();
-                bookToAdd.ID = i;
-                bookToAdd.titleBook = title;
-                bookToAdd.Author = author;
-                booklist.Add(bookToAdd);
+                var book = console.GetBookData(i);
+                bookManagmentServices.SetBook(book);
+                
                 Console.Write("\n");
             }
-            return booklist;
+                        
+                
+            
         }
-
-        public void BookPrint(List<Book> books)
-        {
-            foreach (Book a in books)
-            {
-                Console.WriteLine(a.ID);
-                Console.WriteLine(a.Author);
-                Console.WriteLine(a.titleBook);
-                Console.Write("\n");
-
-            }
-        }
+        
     }
 }

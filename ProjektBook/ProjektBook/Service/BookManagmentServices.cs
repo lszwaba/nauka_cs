@@ -9,26 +9,35 @@ namespace ProjektBook.Service
 {
     class BookManagmentServices
     {
+        private static List<Book> bookListMain = new List<Book>();
+        
         public void Manage()
         {
-            ExecuteFor();
+            var bookAdder = new BookAdder();
+            var bookConsoleServices = new BookConsoleServices();
+            bookAdder.BookAdd();
+            bookConsoleServices.BookPrint(bookListMain);
+            //ExecuteFor();
             //
         }
-        public void GetBook( int i)
+        public List<Book> GetBooks()
         {
-            var booklist = new List<Book>();
-            Book bookToAdd = new Book();
-            bookToAdd.ID = i;
-            bookToAdd.titleBook = "title_" + i.ToString();
-            bookToAdd.Author = "Ziomek";
-            booklist.Add(bookToAdd);
+            return bookListMain;            
         }
+        public void SetBook(Book book)
+        {
+            
+            bookListMain.Add(book);
+            
+        }
+        
+        /*
         public void ExecuteFor()
         {
             
             for(int i = 1; i< 11; i++)
             {
-                GetBook( i);
+                GetBooks( i);
             }
         }
         public void ExecuteWhile()
@@ -37,7 +46,7 @@ namespace ProjektBook.Service
             int indeks = 0;
             while (indeks <= 10)
             {
-                GetBook( indeks);
+                GetBooks( indeks);
             }
         }
         public void ExecuteDoWhile()
@@ -46,11 +55,10 @@ namespace ProjektBook.Service
             int indeks = 0;
             do
             {
-                GetBook( indeks);
+                GetBooks( indeks);
             }
-            while (indeks <= 10);
-           
+            while (indeks <= 10);           
         }
-
+        */
     }
 }

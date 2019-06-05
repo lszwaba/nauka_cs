@@ -18,6 +18,7 @@ namespace ProjektBook
             // booklist = new BookAdder().BookAdd();
             // new BookAdder().BookPrint(booklist);
             new BookManagmentServices().Manage();
+            Console.ReadKey();
         }
     }
 }
